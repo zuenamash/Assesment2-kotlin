@@ -10,14 +10,14 @@ fun main(){
     println( account.withdrawals)
         account.details()
 
-    var a=Product("bottle",10.0,400.0,"hygiene")
-    var b=Product("laptop",30.0,1000.5,"groceries")
-    var c=Product("pens",10.5,100.5,"other")
-    var d=Product("juices",2.0,450.0,"groceries")
-    assignPrdt(a)
-    assignPrdt(b)
-    assignPrdt(c)
-    assignPrdt(d)
+    var w=Product("bottle",10.0,400.0,"hygiene")
+    var x=Product("laptop",30.0,1000.5,"groceries")
+    var y=Product("pens",10.5,100.5,"other")
+    var z=Product("juices",2.0,450.0,"groceries")
+    assignPrdt(w)
+    assignPrdt(x)
+    assignPrdt(y)
+    assignPrdt(z)
 
 
 
@@ -48,14 +48,19 @@ class SavingsAccount(accountNumber: String,accountName: String,balance: Double, 
 data class Product(var name:String, var weight:Double,var price:Double,var category:String)
 fun assignPrdt(product:Product){
 
-    var groceriesLists= mutableListOf<Product>()
-    var hygieneLists= mutableListOf<Product>()
-    var otherLists= mutableListOf<Product>()
+    var groceries= mutableListOf<Product>()
+    var hygiene= mutableListOf<Product>()
+    var other= mutableListOf<Product>()
     when(product.category){
-        "groceries"-> groceriesLists.add(product)
-        "hygiene"->hygieneLists.add(product)
-        "other"->otherLists.add(product)
+        "groceriess"-> groceries.add(product)
+        "hygienes"->hygiene.add(product)
+        "others"->other.add(product)
     }
     println( listOf(product))
 
+}
+fun even(banana:String):String{
+    var banana{
+        for (txt in banana)
+    }
 }
